@@ -11,7 +11,8 @@ public class Calculator {
 		int num1 = userInput.nextInt();
 		int num2 = userInput.nextInt();
 		
-		System.out.println("Would you like to add or subtract these numbers?\nType \"sub\" for subtract or \"add\" for add");
+		System.out.println("Would you like to add, subtract, multiply, or divide these numbers?");
+		System.out.println("Type \"sub\" to subtract, \"add\" to add, \"mult\" to multiply, or \"div\" to divide");
 		
 		userInput.nextLine();
 		String choice = userInput.nextLine();
@@ -22,6 +23,12 @@ public class Calculator {
 		else if(choice.equalsIgnoreCase("sub")) {
 			subtract(num1, num2);
 		}
+		else if(choice.equalsIgnoreCase("mult")) {
+			multiply(num1, num2);
+		}
+		else {
+			divide(num1, num2);
+		}
 	}
 
 	public static void add(int int1,int int2) {
@@ -30,5 +37,13 @@ public class Calculator {
 	
 	public static void subtract(int int1, int int2) {
 		System.out.println("Result: " + (int1 - int2));
+	}
+	
+	public static void multiply(int int1, int int2) {
+		System.out.println("Result: " + (int1 * int2));
+	}
+	
+	public static void divide(int int1, int int2) {
+		System.out.println("Result: " + (int1 / int2));
 	}
 }
