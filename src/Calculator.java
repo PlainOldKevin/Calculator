@@ -44,6 +44,11 @@ public class Calculator {
 	}
 	
 	public static void divide(double int1, double int2) {
-		System.out.println("Result: " + (int1 / int2));
+		if (int2 == 0) {
+			System.out.println("Error: Divide by Zero");
+		}
+		else {
+			System.out.println("Result: " + (int1 / int2));
+		}
 	}
 }
